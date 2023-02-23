@@ -23,4 +23,4 @@ jobs:
           python BPNN.ipynb
           
           echo "README : "
-          cat README.txt
+          cat README.md
