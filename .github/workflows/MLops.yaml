@@ -22,5 +22,6 @@ jobs:
           pip install -r requirement.txt
           python BPNN.ipynb
           
-          echo "README : "
-          cat README.md
+          echo "## Model metrics" > report.md
+          cat README.md >> report.md
+          
