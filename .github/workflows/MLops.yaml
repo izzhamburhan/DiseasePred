@@ -25,3 +25,9 @@ jobs:
           echo "## Model metrics" > report.md
           cat README.md >> report.md
           
+          echo "## Data Vis" >> report.md
+          cml-publish accuracy.png --md >> report.md
+          cml-publish mse.png --md >> report.md
+          
+          cml-send-comment report.md
+          
