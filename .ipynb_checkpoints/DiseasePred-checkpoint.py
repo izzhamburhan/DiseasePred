@@ -147,8 +147,8 @@ A1 = sigmoid(Z1)
 Z2 = np.dot(A1, W2)
 A2 = sigmoid(Z2)
 
-acc = accuracy(A2, y_test)
-print("Accuracy: {}".format(acc))
+test_acc = accuracy(A2, y_test)
+print("Accuracy: {}".format(test_acc))
 
 
 predictions_df = pd.DataFrame( list(A2.argmax(axis=1)), list(y_test.argmax(axis=1)) , columns=['predicted'] )
@@ -172,9 +172,7 @@ print(f'{correct} correct prediction out of {total}')
 
 
 
-
 with open("metrics.txt", 'w') as outfile:
         outfile.write("Training variance explained: %2.1f%%\n" % acc)
-        outfile.write("Test variance explained: %2.1f%%\n" % mse)
+        outfile.write("Test variance explained: %2.1f%%\n" % test_acc)
         
-        outfile.write(predictions_df)
