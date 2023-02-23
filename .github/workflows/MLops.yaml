@@ -2,7 +2,7 @@ name: Disease-Prediction
 on: [push]
 jobs:
   run:
-    runs-on: windows10 
+    runs-on: [ubuntu-latest]
     # ubuntu-latest
     # optionally use a convenient Ubuntu LTS + DVC + CML image
     # container: ghcr.io/iterative/cml:0-dvc2-base1
@@ -19,8 +19,8 @@ jobs:
       - name: Train model
         run: |
           # Your ML workflow goes here
-          pip install -r requirements.txt
-          python BPNN.py
+          pip install -r requirement.txt
+          python BPNN.ipynb
           
           echo "MODEL METRICS"
           cat metrics.txt
