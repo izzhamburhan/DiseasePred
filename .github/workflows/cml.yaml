@@ -15,19 +15,24 @@ jobs:
       #   with:
       #     python-version: '3.x'
       - uses: iterative/setup-cml@v1
+      - uses: actions/checkout@v3
       - name: Train model
         run: |
           # Your ML workflow goes here
           pip install -r requirement.txt
           python DiseasePred.py
           
-          echo "## Model metrics" > report.md
+      - name: Create CML report
+        env:
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Post CML report as a comment in GitHub
+          
+          echo '## MODEL METRICS' > report.md
           cat metrics.txt >> report.md
-        
-      
           
+          echo '## Data Viz' > report.md
+          echo '![](./accuracy.png)'>> report.md
+          echo '![](./mse.png)'>> report.md
           
-      
-          
-          
-          
+          cml comment create --publish report.md
