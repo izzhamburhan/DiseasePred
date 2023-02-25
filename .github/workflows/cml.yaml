@@ -32,7 +32,7 @@ jobs:
           cat metrics.txt >> report.md
           
           echo '## Data Viz' > report.md
-          echo '![](./accuracy.png)'>> report.md
-          echo '![](./mse.png)'>> report.md
+          echo '![](./images/accuracy.png)' >> report.md
+          echo '![](./images/mse.png)' >> report.md
           
           cml comment create --publish report.md
