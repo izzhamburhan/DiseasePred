@@ -20,7 +20,7 @@ def disease_prediction(input_data):
     # reshape the array as we are predicting for one instance
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 
-    prediction = classifier.predict(input_data_reshaped)
+    prediction = loaded_model.predict(input_data_reshaped)
     print(prediction)
 
     if (prediction[0] == 0):
@@ -119,8 +119,9 @@ def __main__():
         prognosis = disease_prediction([itching,skin_rash,continuous_sneezing,shivering,chills,joint_pain,stomach_pain,acidity,ulcers_on_tongue,muscle_wasting,vomiting,fatigue,weight_loss,restlessness,lethargy,patches_in_throat,irregular_sugar_level,cough,high_fever,breathlessness,sweating,indigestion,headache,nausea,loss_of_appetite,pain_behind_the_eyes,back_pain,diarrhoea,mild_fever,swelled_lymph_nodes,malaise,blurred_and_distorted_vision,phlegm,throat_irritation,redness_of_eyes,sinus_pressure,runny_nose,congestion,chest_pain,dizziness,obesity,excessive_hunger,extra_marital_contacts,loss_of_balance,loss_of_smell,depression,irritability,muscle_pain,red_spots_over_body,watering_from_eyes,increased_appetite,polyuria,lack_of_concentration,visual_disturbances,pus_filled_pimples,blackheads,scurring])
         
         
-    st.success(diagnosis)
+    st.success(prognosis)
+    
+if __name__ == '__main__':
+    __main__()
     
 
-if __name__ == '__main__' :
-        main()

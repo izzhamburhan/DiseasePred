@@ -122,5 +122,5 @@ def __main__():
     st.success(diagnosis)
     
 
-if __name__ == '__main__' :
-        main()
+if __name__ = '__main__':
+    main()
