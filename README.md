@@ -10,6 +10,8 @@ web data link :(https://www.kaggle.com/datasets/kaushil268/disease-prediction-us
 - Seaborn
 - Matplotlib
 - sklearn
+- pickle
+- streamlit
 
 ### Read Target As :
 - 0 - Acne 
