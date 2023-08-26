@@ -1,5 +1,5 @@
 # Malaysia Disease Prediction Using BPNN
-- This is my assignment in my college to predict disease that are common in Malaysia. In this project my team have choose 12 disease that we want to predict since it is the disease that we always hear it. This project is to create an machine learning algorithm using backpropagation to predict disease that might be patient have.
+- This is algorithm to predict disease that are common in Malaysia based on the symptom. In this project my team have choose 12 disease that we want to predict since it is the disease that we always hear it. This project is to create an machine learning algorithm using backpropagation to predict disease that might be patient have.
 
 .
 web data link :(https://www.kaggle.com/datasets/kaushil268/disease-prediction-using-machine-learning)
